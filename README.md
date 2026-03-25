@@ -4,6 +4,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)](https://github.com)
 [![Security](https://img.shields.io/badge/Security-Incident%20Response-red)](https://github.com)
 
+**English** | [简体中文](README_zh-CN.md) | [日本語](README_ja.md)
+
 An AI-powered skill for detecting, investigating, and removing cryptocurrency miners and associated malware from Linux servers.
 
 ## Why
