@@ -1,17 +1,16 @@
 # cryptominer-hunt
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
 [![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)](https://github.com)
 [![Security](https://img.shields.io/badge/Security-Incident%20Response-red)](https://github.com)
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for detecting, investigating, and removing cryptocurrency miners and associated malware from Linux servers.
+An AI-powered skill for detecting, investigating, and removing cryptocurrency miners and associated malware from Linux servers.
 
 ## Why
 
 Cryptominer malware is one of the most common payloads deployed on compromised Linux servers. Cleaning it up properly requires chasing a full attack chain — miners, droppers, persistence mechanisms, entry points, and lateral movement — across dozens of hiding spots. This is tedious, error-prone, and easy to do incompletely.
 
-**cryptominer-hunt** turns Claude Code into an incident responder. Rather than giving it a rigid checklist, the skill defines *goals and principles*, letting the LLM adapt its approach to each unique server environment. It investigates like a human analyst would: following evidence, thinking adversarially, and chasing every thread to its end.
+**cryptominer-hunt** turns an AI coding assistant into an incident responder. Rather than giving it a rigid checklist, the skill defines *goals and principles*, letting the AI adapt its approach to each unique server environment. It investigates like a human analyst would: following evidence, thinking adversarially, and chasing every thread to its end.
 
 ## What it does
 
@@ -26,7 +25,7 @@ Cryptominer malware is one of the most common payloads deployed on compromised L
 
 ## Installation
 
-Copy the skill into your Claude Code skills directory:
+Copy the skill file into your AI coding assistant's skills directory:
 
 ```bash
 # Create the skill directory
@@ -39,12 +38,12 @@ cp SKILL.md ~/.claude/skills/cryptominer-hunt/SKILL.md
 Or clone this repo directly:
 
 ```bash
-git clone https://github.com/bayuncao/cryptominer-hunt.git ~/.claude/skills/cryptominer-hunt
+git clone https://github.com/shengmeixia/cryptominer-hunt.git ~/.claude/skills/cryptominer-hunt
 ```
 
 ## Usage
 
-From any Claude Code session on a Linux server:
+From a terminal session on a Linux server:
 
 ```
 # Full scan — investigate and clean (with confirmation before destructive actions)
@@ -65,16 +64,16 @@ From any Claude Code session on a Linux server:
 
 This skill is intentionally **goal-oriented, not prescriptive**. It defines *what* to investigate, not *how*.
 
-- **Zero hardcoded commands.** The LLM chooses the right tools for the OS and environment it finds itself on.
+- **Zero hardcoded commands.** The AI chooses the right tools for the OS and environment it finds itself on.
 - **Evidence-driven.** Each finding triggers deeper investigation — a miner implies a dropper, a dropper implies an entry point, an entry point implies persistence.
-- **Adversarial thinking.** The skill prompts the LLM to consider evasion techniques, hidden processes, tampered system binaries, and attack patterns it might otherwise overlook.
+- **Adversarial thinking.** The skill prompts the AI to consider evasion techniques, hidden processes, tampered system binaries, and attack patterns it might otherwise overlook.
 - **Parallel execution.** Independent checks run simultaneously for faster triage.
 
 This means the skill works on Debian, Ubuntu, RHEL, Alpine, Arch, and any other Linux distribution without modification.
 
 ## Requirements
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI
+- An AI coding assistant that supports custom skills
 - Linux server (any distribution)
 - Root or sudo access on the target server
 
